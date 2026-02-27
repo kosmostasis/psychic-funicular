@@ -1,0 +1,50 @@
+[
+  {
+    "conversation_id": "conv-github-1",
+    "source": "github",
+    "root_permalink": "https://github.com/ethersphere/bee/pull/1234",
+    "status": "open",
+    "priority": "p2",
+    "assigned_to": "devrel",
+    "event_ids": ["evt-github-1"],
+    "summary": "PR: stamp usage improvements"
+  },
+  {
+    "conversation_id": "conv-github-2",
+    "source": "github",
+    "root_permalink": "https://github.com/ethersphere/bee/issues/1233",
+    "status": "waiting",
+    "priority": "p1",
+    "assigned_to": "bee-team",
+    "event_ids": ["evt-github-2"],
+    "summary": "Bug: node crash with large uploads when stamps disabled"
+  },
+  {
+    "conversation_id": "conv-discord-1",
+    "source": "discord",
+    "root_permalink": "https://discord.com/channels/123/456/789",
+    "status": "resolved",
+    "priority": "p2",
+    "event_ids": ["evt-discord-1"],
+    "summary": "Question: running node behind NAT",
+    "resolution": "Answered in thread with docs link"
+  },
+  {
+    "conversation_id": "conv-discord-2",
+    "source": "discord",
+    "root_permalink": "https://discord.com/channels/123/support/790",
+    "status": "ignored",
+    "priority": "p3",
+    "event_ids": ["evt-discord-2"],
+    "summary": "Praise for stamp docs"
+  },
+  {
+    "conversation_id": "conv-reddit-1",
+    "source": "reddit",
+    "root_permalink": "https://reddit.com/r/ethswarm/comments/abc123",
+    "status": "open",
+    "priority": "p2",
+    "event_ids": ["evt-reddit-1"],
+    "summary": "Question: stamp pricing per chunk?"
+  }
+]
