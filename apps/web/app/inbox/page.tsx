@@ -1,12 +1,7 @@
 import Link from "next/link";
-import {
-  simulatorConversations,
-  simulatorEvents,
-} from "@swarm-cdp/simulator-data";
+import { simulatorConversations } from "@swarm-cdp/simulator-data";
 
 export default function InboxPage() {
-  const byId = new Map(simulatorEvents.map((e) => [e.event_id, e]));
-
   return (
     <div className="space-y-6">
       <div>
@@ -32,9 +27,7 @@ export default function InboxPage() {
             </tr>
           </thead>
           <tbody>
-            {simulatorConversations.map((c) => {
-              const firstEvent = c.event_ids[0] ? byId.get(c.event_ids[0]) : null;
-              return (
+            {simulatorConversations.map((c) => (
                 <tr
                   key={c.conversation_id}
                   className="border-b border-[var(--border)] last:border-0"
@@ -73,8 +66,7 @@ export default function InboxPage() {
                     </a>
                   </td>
                 </tr>
-              );
-            })}
+            ))}
           </tbody>
         </table>
       </div>
