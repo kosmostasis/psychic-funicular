@@ -5,6 +5,9 @@
     "build": "turbo run build",
     "dev": "pnpm --filter @swarm-cdp/core build && pnpm --filter @swarm-cdp/simulator-data build && pnpm --filter @swarm-cdp/web dev",
     "dev:web": "pnpm --filter @swarm-cdp/web dev",
+    "dev:clean": "pnpm --filter @swarm-cdp/web dev:clean",
+    "start:web": "pnpm --filter @swarm-cdp/web start",
+    "start:web:3001": "pnpm --filter @swarm-cdp/web start:3001",
     "lint": "turbo run lint"
   },
   "devDependencies": {
