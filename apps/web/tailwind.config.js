@@ -4,8 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-geist-mono)", "monospace"],
+        /* Only change: Inter (ethswarm.org); rest of UI unchanged */
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        mono: ["ui-monospace", "monospace"],
       },
     },
   },
