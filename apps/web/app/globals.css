@@ -2,21 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Swarm-aligned dark theme
+ *
+ * Palette is inspired by ethSwarm.org:
+ * - Warm amber/orange accent
+ * - Deep neutral background
+ * - Soft contrast for cards and borders
+ */
 :root {
-  --bg: #0d1117;
-  --card: #161b22;
-  --border: #30363d;
-  --text: #e6edf3;
-  --muted: #8b949e;
-  --accent: #58a6ff;
-  --success: #3fb950;
-  --warning: #d29922;
+  --bg: #050608;
+  --card: #101219;
+  --border: #222632;
+  --text: #f5f5f5;
+  --muted: #9da3b4;
+  --accent: #ffb643; /* Swarm-like amber accent */
+  --success: #46c38a;
+  --warning: #ff8a3c;
 }
 
 body {
-  background: var(--bg);
+  background: radial-gradient(circle at top left, #111523 0, #050608 55%);
   color: var(--text);
-  /* Only change vs original: Inter (ethswarm.org) instead of Geist */
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
@@ -26,3 +33,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Subtle card and table styling tuned for Swarm palette */
+.card-swarm {
+  background: radial-gradient(circle at top, rgba(255, 182, 67, 0.09), transparent 55%),
+    var(--card);
+  border-color: var(--border);
+}
+
