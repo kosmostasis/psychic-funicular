@@ -9,7 +9,15 @@ pnpm install
 pnpm dev
 ```
 
-Then open **http://localhost:3000**.
+Then open **http://localhost:3000** (or **http://localhost:3001** if the script prints that port 3000 was busy).
+
+**Avoid port conflicts without killing PIDs:**  
+`pnpm dev:auto` — uses 3000 if free, otherwise 3001.  
+**Stale UI after pulling changes:**  
+`pnpm dev:clean:auto` — deletes `.next`, then starts dev with auto port.
+
+**Watchpack EMFILE (too many open files):**  
+`pnpm dev` / `pnpm dev:clean:auto` run **Turbopack** (`next dev --turbo`) by default so Watchpack isn’t used. To force classic webpack dev: `CDP_WEBPACK_DEV=1 pnpm dev:webpack` (uses `WATCHPACK_POLLING` + optional `CDP_DEV_POLL=1` webpack poll in `next.config.js`). If anything still fails: `ulimit -n 10240` then retry.
 
 ### If the page looks wrong (white background, old “Observe and triage” copy, nav links run together)
 
