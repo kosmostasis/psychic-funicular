@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "clean": "node -e \"try{require('fs').rmSync('.next',{recursive:true,force:true})}catch(e){}\"",
-    "dev:clean": "pnpm run clean && next dev",
+    "dev:clean": "pnpm run clean && node scripts/dev-auto.mjs",
+    "dev:auto": "node scripts/dev-auto.mjs",
+    "dev:clean:auto": "pnpm run clean && node scripts/dev-auto.mjs",
     "build": "next build",
-    "dev": "next dev",
+    "dev": "node scripts/dev-auto.mjs",
+    "dev:webpack": "CDP_WEBPACK_DEV=1 WATCHPACK_POLLING=true WATCHPACK_WATCHER_LIMIT=20 CDP_DEV_POLL=1 next dev",
     "start": "next start",
     "start:3001": "next start -p 3001",
     "lint": "next lint"
