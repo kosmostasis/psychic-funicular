@@ -1,0 +1,20 @@
+# M2: Postgres for CDP. Start with: docker compose -f infra/docker-compose.yml up -d
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: cdp
+      POSTGRES_PASSWORD: cdp
+      POSTGRES_DB: cdp
+    ports:
+      - "5432:5432"
+    volumes:
+      - cdp_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cdp"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  cdp_pg_data: {}
