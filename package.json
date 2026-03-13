@@ -6,6 +6,8 @@
     "dev": "pnpm --filter @swarm-cdp/core build && pnpm --filter @swarm-cdp/simulator-data build && pnpm --filter @swarm-cdp/web dev",
     "dev:web": "pnpm --filter @swarm-cdp/web dev",
     "dev:clean": "pnpm --filter @swarm-cdp/web dev:clean",
+    "dev:auto": "pnpm --filter @swarm-cdp/core build && pnpm --filter @swarm-cdp/simulator-data build && pnpm --filter @swarm-cdp/web dev:auto",
+    "dev:clean:auto": "pnpm --filter @swarm-cdp/core build && pnpm --filter @swarm-cdp/simulator-data build && pnpm --filter @swarm-cdp/web dev:clean:auto",
     "start:web": "pnpm --filter @swarm-cdp/web start",
     "start:web:3001": "pnpm --filter @swarm-cdp/web start:3001",
     "lint": "turbo run lint"
