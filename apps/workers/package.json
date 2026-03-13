@@ -1,0 +1,20 @@
+{
+  "name": "@swarm-cdp/workers",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "ingest:discord": "node dist/discord/run.js",
+    "ingest:x": "node dist/x/run.js",
+    "ingest:all": "node dist/discord/run.js && node dist/x/run.js"
+  },
+  "dependencies": {
+    "@swarm-cdp/core": "workspace:*",
+    "@swarm-cdp/db": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
